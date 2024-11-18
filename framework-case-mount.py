@@ -18,7 +18,7 @@ caseHoldL = caseL + 1 * wallT
 caseInset = extD / 4
 
 usbClearance = 3
-usbSideClearance = 6
+usbSideClearance = 8
 
 l = caseHoldL + extD + wallT - caseInset
 
