@@ -28,7 +28,7 @@ class Workplane(queryabolt.WorkplaneMixin, cq.Workplane):
 def mount():
     # Extrude the main holding feature
     # TODO: use fits here to create proper wall thickens
-    m = Workplane("YZ").rect(caseHoldW, caseH + 2 * wallT ).extrude(l)
+    m = Workplane("YZ").rect(caseHoldW, caseH + 2 * wallT + caseFit).extrude(l)
 
     # Cut into it for case clearance
     m = m.faces(">Y").workplane(centerOption="CenterOfBoundBox").tag("cutout").move(-extD / 2 + caseInset / 2, 0).rect(caseL + caseFit, caseH + caseFit).cutBlind(-caseHoldW + wallT)
@@ -36,7 +36,7 @@ def mount():
     m = m.workplaneFromTagged("cutout").move(-extD / 2 + caseInset / 2, 0).rect(caseL - 2 * wallT - 2 * usbSideClearance, caseH - 2 * usbClearance).cutBlind(-caseHoldW)
 
     # Put a little space between us and the extrusion we're holding onto
-    m = m.faces(">Z").workplane(centerOption="CenterOfBoundBox").move(-l / 2 + extD / 2, 0).rect(caseHoldW, extD).extrude(extSpacing)
+    m = m.faces(">Z").workplane(centerOption="CenterOfBoundBox").move(-l / 2 + extD / 2, 0).rect(caseHoldW, extD).extrude(extSpacing - caseFit / 2)
 
     # And get us something to hold on with
     h = caseH + 2 * wallT + extD + extSpacing
