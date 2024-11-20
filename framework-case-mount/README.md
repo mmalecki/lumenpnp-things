@@ -5,8 +5,11 @@ next to the the control unit, enabling easy cable routing.
 
 ![Mount, printed in brown PLA, against green PLA of Framework case, mounted to LumenPnP](docs/img/mount.jpg)
 
+# Printing
 To print, print two copies: one as-is, the **other one mirrored along the X axis**.
 Print laying on the "outer" face.
+
+# Mounting
 
 To mount, two M4x16 and two M4 t-nuts are required.
 
@@ -27,4 +30,4 @@ extrusion and tighten the mounting bolt.
 This is what I figure is the safest way. You could also fumble about 
 and almost drop the case a couple of times throughout the entire ordeal.
 
-Built files are available on [Printables](
+Built files are available on [Printables](https://www.printables.com/model/1080896-framework-printable-case-mount-for-lumenpnp).
