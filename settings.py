@@ -1,0 +1,5 @@
+class Settings:
+    fit = 0.2
+    loose_fit = 0.5
+    v_slot_d = 20
+    v_slot_bolt = "M4"
