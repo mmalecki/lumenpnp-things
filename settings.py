@@ -8,3 +8,4 @@ class Settings:
     bolt = "M3"
     bolt_d = queryabolt.boltData(bolt)['diameter']
     bolt_fit = fit
+    nut_h = queryabolt.nutData(bolt)['thickness']
